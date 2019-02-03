@@ -45,7 +45,7 @@ void usage(char *argv0)
 	fprintf(stderr, "Usage: %s [options]...\n", basename(argv0));
 	fprintf(stderr,
 	"Options:\n"
-	"    -e <event file>\n"
+	"    -i <event file>\n"
 	"    (none)\n"
 	);
 }
@@ -53,7 +53,7 @@ void usage(char *argv0)
 int main(int argc, char *argv[])
 {
 	char *argv0, **next_arg, *arg;
-	int ofd = 0, kbe = -1;
+	int ofd = 1, kbe = -1;
 	ssize_t r;
 	struct input_event E;
 	char *loptn[2], *loptv;
