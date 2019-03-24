@@ -12,7 +12,7 @@ char* basename(char *S)
 	char *s = S;
 	while (*s) s++;
 	while (S != s && *s != '/') s--;
-	s++;
+	if (*s == '/') s++;
 	return s;
 }
 
@@ -34,7 +34,6 @@ int main(int argc, char *argv[])
 	int nfds = 0, r, i, e;
 	int F[NUM_FD] = { 0 };
 	char *FN[NUM_FD] = { 0 };
-	_Bool first = 0;
 
 	if (argc == 1) {
 		usage(basename(*argv));
