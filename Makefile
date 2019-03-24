@@ -1,8 +1,8 @@
+CFLAGS=-std=c99 -Wall -Wextra -pedantic
 
 all : extrakb fselect
 
 fselect : fselect.o
-
 extrakb : extrakb.o
 
 %.o : %.c
